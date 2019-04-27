@@ -29,7 +29,7 @@
                         <input id="txt_PURCHASE_PRICE" class="form-control" type="text" placeholder="">
                     </div>
                 </div>
-                <div class="col-md-6">
+                <div class="col-md-12">
                     <div class="form-group organic-form no-radius">
                         <label>We think you are : </label>
                         <input id="txt_Ready" class="form-control" disabled type="text" placeholder="">
@@ -78,11 +78,15 @@
     </script>
     <section class="video-section">
         <div class="row">
+            <div class="col-md-1"></div>
+            <div class="col-md-10 col-offset-1 ">
             <input id="pac-input" class="controls" type="text" style="padding: 5px;" placeholder="Search Box">
-            <div id="map" style="height: 50vh;"></div>
+            <div id="map" style="height: 50vh; width: 180vh;"></div>
             <%--<div class="contact-map">
                 <iframe class="map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3689.7863885381144!2d91.81020831453182!3d22.361693185291596!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x30acd9f3d2063673%3A0x6411900fd40637c8!2sSynchronise+IT!5e0!3m2!1sen!2sbd!4v1531126085037" style="border: 0" allowfullscreen=""></iframe>
             </div>--%>
+            </div>
+            
         </div>
     </section>
     <section class="video-section" style="padding-bottom:44px;">
@@ -102,6 +106,7 @@
                 </div>
             </div>
         </div>
+        
     </section>
     <script>
         // This example adds a search box to a map, using the Google Place Autocomplete
@@ -207,6 +212,14 @@
             </div>
         </div>
     </section>
+    <div class="row" style="padding-bottom: 20px; padding-top: 25px;">
+            <div class="col-md-12" style="text-align: center; left: 0; right: 0; margin: auto;">
+                <a id="btn_RedirectForm" href="Form.aspx" class="btn btn-info btn-lg" style="background-color:#df2927!important;padding-top:10px;padding-bottom:10px;">
+                    <h3 style="color:white;margin-bottom:10px;">Continue</h3>
+                </a>
+            </div>
+        </div>
+    <div><br /></div>
     <script type="text/javascript">
         $(function () {
             var sRecommendedList = [
@@ -214,7 +227,9 @@
                 "KLCC",
                 "IOI Mall",
                 "SetiaWalk",
-                "Times Square"
+                "Times Square",
+                "TRX",
+                "DC Mall"
             ]
 
             var sShuffledList = shuffle(sRecommendedList);

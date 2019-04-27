@@ -4,7 +4,10 @@
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
     <section class="sub-header shop-layout-1" style="background-color:#002d62!important">
-        <div class="overlay-call-to-action"></div>
+       <%-- <img align="left" src="img/banknote.png" style="height: 80%; float: left;"/>--%>
+        <div class="overlay-call-to-action">
+        </div>
+
         <h3 class="heading-style-3" style="color:#fff">Mortgage for Millennials</h3>
     </section>
 
