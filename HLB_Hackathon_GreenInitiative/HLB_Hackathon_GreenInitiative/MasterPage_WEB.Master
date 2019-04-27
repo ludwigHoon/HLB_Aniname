@@ -29,6 +29,8 @@
     </style>
     <asp:ContentPlaceHolder ID="head" runat="server">
     </asp:ContentPlaceHolder>
+
+    <script src="assets/js/library/jquery.min.js"></script>
 </head>
 <body class="animsition">
     <div class="contact" id="page">
@@ -46,7 +48,7 @@
             </div>
         </div>
     </footer>
-    <script src="assets/js/library/jquery.min.js"></script>
+    
     <script src="assets/js/library/bootstrap.min.js"></script>
     <script src="assets/js/function-check-viewport.js"></script>
     <script src="assets/js/library/slick.min.js"></script>
@@ -63,7 +65,7 @@
     <script src="assets/js/global.js"></script>
     <script src="assets/js/config-mm-menu.js"></script>
     <script src="assets/js/config-set-bg-blog-thumb.js"></script>
-    <script src="https://maps.googleapis.com/maps/api/js?key=&amp;sensor=false&amp;extension=.js"></script>
-    <script src="assets/js/config-google-map.js"></script>
+    <%--<script src="https://maps.googleapis.com/maps/api/js?key=&amp;sensor=false&amp;extension=.js"></script>
+    <script src="assets/js/config-google-map.js"></script>--%>
 </body>
 </html>

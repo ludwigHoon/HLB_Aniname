@@ -6,7 +6,7 @@
     <section class="sub-header shop-layout-1">
         <img class="rellax bg-overlay" src="assets/images/sub-header/09.jpg" alt="">
         <div class="overlay-call-to-action"></div>
-        <h3 class="heading-style-3">Survey</h3>
+        <h3 class="heading-style-3">User Details</h3>
     </section>
 
     <section class="boxed-sm" style="padding-top:10px;padding-bottom:10px;">

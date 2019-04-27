@@ -185,6 +185,10 @@
                         console.log("Returned place contains no geometry");
                         return;
                     }
+
+                    $("#txt_Latitude").val(place.geometry.location.lat());
+                    $("#txt_Longitude").val(place.geometry.location.lng());
+
                     var icon = {
                         url: place.icon,
                         size: new google.maps.Size(71, 71),
