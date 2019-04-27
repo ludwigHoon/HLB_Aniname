@@ -1,0 +1,69 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="MasterPage_WEB.master.cs" Inherits="HLB_Hackathon_GreenInitiative.MasterPage_WEB" %>
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Green Initiative</title>
+    <meta charset="utf-8" />
+    <meta name="description" content="" />
+    <meta name="keywords" content="" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link href="https://fonts.googleapis.com/css?family=Playfair+Display:400,400i,700,700i,900,900i" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css?family=Roboto:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i" rel="stylesheet" />
+    <link rel="stylesheet" type="text/css" href="assets/css/main.css" />
+    <link rel="shortcut icon" type="image/png" href="assets/images/favicon.png" />
+    <style>
+        .icon-box {
+            border: 1px solid #e82a6f;
+            color: #e82a6f;
+        }
+
+            .icon-box i {
+                color: #e82a6f;
+                text-decoration: none;
+            }
+
+            .icon-box:hover {
+                background-color: #e82a6f;
+            }
+    </style>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body class="animsition">
+    <div class="contact" id="page">
+        <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+        </asp:ContentPlaceHolder>
+    </div>
+    <footer class="footer-style-1">
+        <div class="copy-right style-1" style="position: fixed;bottom: 0px;left: 0px;right: 0px;padding: 5px 15px;margin-bottom: 0px;color: #fff;background-color: #002d62;">
+            <div class="container">
+                <div class="row">
+                    <div class="copy-right-inner">
+                        <p>Copyright © 2019</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <script src="assets/js/library/jquery.min.js"></script>
+    <script src="assets/js/library/bootstrap.min.js"></script>
+    <script src="assets/js/function-check-viewport.js"></script>
+    <script src="assets/js/library/slick.min.js"></script>
+    <script src="assets/js/library/select2.full.min.js"></script>
+    <script src="assets/js/library/imagesloaded.pkgd.min.js"></script>
+    <script src="assets/js/library/jquery.mmenu.all.min.js"></script>
+    <script src="assets/js/library/rellax.min.js"></script>
+    <script src="assets/js/library/isotope.pkgd.min.js"></script>
+    <script src="assets/js/library/bootstrap-notify.min.js"></script>
+    <script src="assets/js/library/bootstrap-slider.js"></script>
+    <script src="assets/js/library/in-view.min.js"></script>
+    <script src="assets/js/library/countUp.js"></script>
+    <script src="assets/js/library/animsition.min.js"></script>
+    <script src="assets/js/global.js"></script>
+    <script src="assets/js/config-mm-menu.js"></script>
+    <script src="assets/js/config-set-bg-blog-thumb.js"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=&amp;sensor=false&amp;extension=.js"></script>
+    <script src="assets/js/config-google-map.js"></script>
+</body>
+</html>

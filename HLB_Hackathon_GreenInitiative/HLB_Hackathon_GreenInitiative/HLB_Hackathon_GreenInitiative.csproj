@@ -1,0 +1,663 @@
+﻿<Project ToolsVersion="15.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\TypeScript\Microsoft.TypeScript.Default.props" Condition="Exists('$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\TypeScript\Microsoft.TypeScript.Default.props')" />
+  <Import Project="..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.0\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props" Condition="Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.0\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" />
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{CF33DDFD-41A1-4E87-84F2-5940E0D8A36D}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>HLB_Hackathon_GreenInitiative</RootNamespace>
+    <AssemblyName>HLB_Hackathon_GreenInitiative</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <UseIISExpress>true</UseIISExpress>
+    <Use64BitIISExpress />
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+    <UseGlobalApplicationHostFile />
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+    <TypeScriptToolsVersion>3.3</TypeScriptToolsVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.CodeDom.Providers.DotNetCompilerPlatform">
+      <HintPath>..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.0\lib\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="assets\css\main.css" />
+    <Content Include="assets\fonts\bootstrap\glyphicons-halflings-regular.svg" />
+    <Content Include="assets\fonts\fontawesome-webfont.svg" />
+    <Content Include="assets\fonts\Linearicons-Free.svg" />
+    <Content Include="assets\images\about\01.jpg" />
+    <Content Include="assets\images\about\02.jpg" />
+    <Content Include="assets\images\about\About-us-01.JPG" />
+    <Content Include="assets\images\about\About-us-02.jpg" />
+    <Content Include="assets\images\about\About-us-03.jpg" />
+    <Content Include="assets\images\about\About-us-04.jpg" />
+    <Content Include="assets\images\announcement\announcement_cny_20190131.png" />
+    <Content Include="assets\images\announcement\announcement_cny_20190131_V2.png" />
+    <Content Include="assets\images\blog\01.jpg" />
+    <Content Include="assets\images\blog\010.jpg" />
+    <Content Include="assets\images\blog\011.jpg" />
+    <Content Include="assets\images\blog\012.jpg" />
+    <Content Include="assets\images\blog\013.jpg" />
+    <Content Include="assets\images\blog\014.jpg" />
+    <Content Include="assets\images\blog\015.jpg" />
+    <Content Include="assets\images\blog\02.jpg" />
+    <Content Include="assets\images\blog\03.jpg" />
+    <Content Include="assets\images\blog\04.jpg" />
+    <Content Include="assets\images\blog\05.jpg" />
+    <Content Include="assets\images\blog\06.jpg" />
+    <Content Include="assets\images\blog\07.jpg" />
+    <Content Include="assets\images\blog\08.jpg" />
+    <Content Include="assets\images\blog\09.jpg" />
+    <Content Include="assets\images\blog\blog-detail-01.jpg" />
+    <Content Include="assets\images\blog\blog-detail-02.jpg" />
+    <Content Include="assets\images\blog\blog-detail-03.jpg" />
+    <Content Include="assets\images\blog\creative-01.jpg" />
+    <Content Include="assets\images\blog\creative-02.jpg" />
+    <Content Include="assets\images\blog\flower-04.jpg" />
+    <Content Include="assets\images\blog\flower-05.jpg" />
+    <Content Include="assets\images\blog\flower-06.jpg" />
+    <Content Include="assets\images\blog\flower-08.jpg" />
+    <Content Include="assets\images\blog\pinterest-01.jpg" />
+    <Content Include="assets\images\blog\pinterest-02.jpg" />
+    <Content Include="assets\images\blog\pinterest-03.jpg" />
+    <Content Include="assets\images\blog\pinterest-04.jpg" />
+    <Content Include="assets\images\blog\pinterest-05.jpg" />
+    <Content Include="assets\images\blog\pinterest-06.jpg" />
+    <Content Include="assets\images\blog\pinterest-07.jpg" />
+    <Content Include="assets\images\blog\pinterest-08.jpg" />
+    <Content Include="assets\images\blog\pinterest-09.jpg" />
+    <Content Include="assets\images\blog\thumb-01.jpg" />
+    <Content Include="assets\images\blog\thumb-02.jpg" />
+    <Content Include="assets\images\blog\thumb-03.jpg" />
+    <Content Include="assets\images\call-to-action\1-1.jpg" />
+    <Content Include="assets\images\call-to-action\1-2.jpg" />
+    <Content Include="assets\images\call-to-action\1-3.jpg" />
+    <Content Include="assets\images\call-to-action\1-4.jpg" />
+    <Content Include="assets\images\call-to-action\1.jpg" />
+    <Content Include="assets\images\call-to-action\2.jpg" />
+    <Content Include="assets\images\call-to-action\3.jpg" />
+    <Content Include="assets\images\call-to-action\4.jpg" />
+    <Content Include="assets\images\call-to-action\lorry.svg" />
+    <Content Include="assets\images\call-to-action\up_arrow.png" />
+    <Content Include="assets\images\call-to-action\up_arrow_white.png" />
+    <Content Include="assets\images\category-product\1-1.jpg" />
+    <Content Include="assets\images\category-product\1-2.jpg" />
+    <Content Include="assets\images\category-product\1-3.jpg" />
+    <Content Include="assets\images\category-product\1.jpg" />
+    <Content Include="assets\images\category-product\2-1.jpg" />
+    <Content Include="assets\images\category-product\2-2.jpg" />
+    <Content Include="assets\images\category-product\2-3.jpg" />
+    <Content Include="assets\images\category-product\2-4.jpg" />
+    <Content Include="assets\images\category-product\2.jpg" />
+    <Content Include="assets\images\category-product\227x156-04.jpg" />
+    <Content Include="assets\images\category-product\3.jpg" />
+    <Content Include="assets\images\category-product\4-1.jpg" />
+    <Content Include="assets\images\category-product\4-2.jpg" />
+    <Content Include="assets\images\category-product\4-3.jpg" />
+    <Content Include="assets\images\category-product\584x400-01.JPG" />
+    <Content Include="assets\images\category-product\584x400-02.jpg" />
+    <Content Include="assets\images\category-product\584x400-03.jpg" />
+    <Content Include="assets\images\category-product\584x400-04.jpg" />
+    <Content Include="assets\images\comment\01.png" />
+    <Content Include="assets\images\comment\02.png" />
+    <Content Include="assets\images\facebook_icon_square.png" />
+    <Content Include="assets\images\favicon.png" />
+    <Content Include="assets\images\FB_share.png" />
+    <Content Include="assets\images\FB_share_small.png" />
+    <Content Include="assets\images\header-banner-01-aboutus.PNG" />
+    <Content Include="assets\images\holidaytag.jpg" />
+    <Content Include="assets\images\icons\admin-icon.png" />
+    <Content Include="assets\images\icons\cart.png" />
+    <Content Include="assets\images\icons\creadit-card-01.png" />
+    <Content Include="assets\images\icons\creadit-card-02.png" />
+    <Content Include="assets\images\icons\creadit-card-03.png" />
+    <Content Include="assets\images\icons\creadit-card-04.png" />
+    <Content Include="assets\images\icons\icon-bag.png" />
+    <Content Include="assets\images\icons\maker.png" />
+    <Content Include="assets\images\icons\paypal-group-icon.png" />
+    <Content Include="assets\images\icons\play-video.png" />
+    <Content Include="assets\images\icons\seperator.png" />
+    <Content Include="assets\images\icons\spin.svg" />
+    <Content Include="assets\images\ipay88_logo_merchant.gif" />
+    <Content Include="assets\images\logo-2.png" />
+    <Content Include="assets\images\logo-3.png" />
+    <Content Include="assets\images\logo-4.png" />
+    <Content Include="assets\images\logo-bp2.png" />
+    <Content Include="assets\images\logo.png" />
+    <Content Include="assets\images\logobp1.png" />
+    <Content Include="assets\images\product\01.jpg" />
+    <Content Include="assets\images\product\010.jpg" />
+    <Content Include="assets\images\product\011.jpg" />
+    <Content Include="assets\images\product\012.jpg" />
+    <Content Include="assets\images\product\013.jpg" />
+    <Content Include="assets\images\product\014.jpg" />
+    <Content Include="assets\images\product\015.jpg" />
+    <Content Include="assets\images\product\016.jpg" />
+    <Content Include="assets\images\product\017.jpg" />
+    <Content Include="assets\images\product\018.jpg" />
+    <Content Include="assets\images\product\019.jpg" />
+    <Content Include="assets\images\product\02.jpg" />
+    <Content Include="assets\images\product\020.jpg" />
+    <Content Include="assets\images\product\021.jpg" />
+    <Content Include="assets\images\product\022.jpg" />
+    <Content Include="assets\images\product\03.jpg" />
+    <Content Include="assets\images\product\04.jpg" />
+    <Content Include="assets\images\product\05.jpg" />
+    <Content Include="assets\images\product\06.jpg" />
+    <Content Include="assets\images\product\07.jpg" />
+    <Content Include="assets\images\product\08.jpg" />
+    <Content Include="assets\images\product\09.jpg" />
+    <Content Include="assets\images\product\485x455_01.jpg" />
+    <Content Include="assets\images\product\485x455_02.jpg" />
+    <Content Include="assets\images\product\485x455_03.jpg" />
+    <Content Include="assets\images\product\485x455_04.JPG" />
+    <Content Include="assets\images\product\485x455_05.JPG" />
+    <Content Include="assets\images\product\485x455_06.jpg" />
+    <Content Include="assets\images\product\cat-01.jpg" />
+    <Content Include="assets\images\product\cat-02.jpg" />
+    <Content Include="assets\images\product\cat-03.jpg" />
+    <Content Include="assets\images\product\flower-01.jpg" />
+    <Content Include="assets\images\product\flower-02.jpg" />
+    <Content Include="assets\images\product\flower-03.jpg" />
+    <Content Include="assets\images\product\flower-06.jpg" />
+    <Content Include="assets\images\product\isotope-01.jpg" />
+    <Content Include="assets\images\product\isotope-02.jpg" />
+    <Content Include="assets\images\product\isotope-03.jpg" />
+    <Content Include="assets\images\product\isotope-04.jpg" />
+    <Content Include="assets\images\product\isotope-05.jpg" />
+    <Content Include="assets\images\product\masonry-01.jpg" />
+    <Content Include="assets\images\product\masonry-010.jpg" />
+    <Content Include="assets\images\product\masonry-011.jpg" />
+    <Content Include="assets\images\product\masonry-012.jpg" />
+    <Content Include="assets\images\product\masonry-013.jpg" />
+    <Content Include="assets\images\product\masonry-02.jpg" />
+    <Content Include="assets\images\product\masonry-03.jpg" />
+    <Content Include="assets\images\product\masonry-04.jpg" />
+    <Content Include="assets\images\product\masonry-05.jpg" />
+    <Content Include="assets\images\product\masonry-06.jpg" />
+    <Content Include="assets\images\product\masonry-07.jpg" />
+    <Content Include="assets\images\product\masonry-08.jpg" />
+    <Content Include="assets\images\product\masonry-09.jpg" />
+    <Content Include="assets\images\product\thumb-cart-01.jpg" />
+    <Content Include="assets\images\product\thumb-cart-02.jpg" />
+    <Content Include="assets\images\product\widget-product-01.jpg" />
+    <Content Include="assets\images\product\widget-product-02.jpg" />
+    <Content Include="assets\images\product\widget-product-03.jpg" />
+    <Content Include="assets\images\promotion\1.jpg" />
+    <Content Include="assets\images\promotion\2.jpg" />
+    <Content Include="assets\images\slider\01.jpg" />
+    <Content Include="assets\images\slider\02.jpg" />
+    <Content Include="assets\images\slider\03.jpg" />
+    <Content Include="assets\images\slider\04.jpg" />
+    <Content Include="assets\images\slider\041.jpg" />
+    <Content Include="assets\images\slider\042.jpg" />
+    <Content Include="assets\images\slider\05.jpg" />
+    <Content Include="assets\images\slider\1.jpg" />
+    <Content Include="assets\images\slider\1580x700_V01.jpg" />
+    <Content Include="assets\images\slider\1580x700_V02.JPG" />
+    <Content Include="assets\images\slider\Banner-01.jpg" />
+    <Content Include="assets\images\slider\slider-2-text-01.png" />
+    <Content Include="assets\images\slide\1.jpg" />
+    <Content Include="assets\images\sub-header\01.jpg" />
+    <Content Include="assets\images\sub-header\010.jpg" />
+    <Content Include="assets\images\sub-header\011.jpg" />
+    <Content Include="assets\images\sub-header\012.jpg" />
+    <Content Include="assets\images\sub-header\013.jpg" />
+    <Content Include="assets\images\sub-header\014.jpg" />
+    <Content Include="assets\images\sub-header\015.jpg" />
+    <Content Include="assets\images\sub-header\016.jpg" />
+    <Content Include="assets\images\sub-header\017.jpg" />
+    <Content Include="assets\images\sub-header\02.jpg" />
+    <Content Include="assets\images\sub-header\03.jpg" />
+    <Content Include="assets\images\sub-header\04.jpg" />
+    <Content Include="assets\images\sub-header\05.jpg" />
+    <Content Include="assets\images\sub-header\06.jpg" />
+    <Content Include="assets\images\sub-header\07.jpg" />
+    <Content Include="assets\images\sub-header\08.jpg" />
+    <Content Include="assets\images\sub-header\09.jpg" />
+    <Content Include="assets\images\team\01.jpg" />
+    <Content Include="assets\images\team\02.jpg" />
+    <Content Include="assets\images\team\03.jpg" />
+    <Content Include="assets\images\team\04.jpg" />
+    <Content Include="assets\images\team\about-us-icon-01.jpg" />
+    <Content Include="assets\images\team\about-us-icon-02.jpg" />
+    <Content Include="assets\images\team\about-us-icon-03.jpg" />
+    <Content Include="assets\images\team\Affordability.png" />
+    <Content Include="assets\images\team\affordable.png" />
+    <Content Include="assets\images\team\Affordable_Small.png" />
+    <Content Include="assets\images\team\Quality.png" />
+    <Content Include="assets\images\team\Quality_Small.png" />
+    <Content Include="assets\images\team\Responsble.png" />
+    <Content Include="assets\images\team\Responsile_Small.png" />
+    <Content Include="assets\images\team\Satisfaction.png" />
+    <Content Include="assets\js\bootstrap.js" />
+    <Content Include="assets\js\config-accrodion.js" />
+    <Content Include="assets\js\config-banner-home-1.js" />
+    <Content Include="assets\js\config-banner-home-4.js" />
+    <Content Include="assets\js\config-banner-slider-2.js" />
+    <Content Include="assets\js\config-banner-slider-3.js" />
+    <Content Include="assets\js\config-carousel-product-quickview.js" />
+    <Content Include="assets\js\config-carousel-thumbnail.js" />
+    <Content Include="assets\js\config-carousel.js" />
+    <Content Include="assets\js\config-google-map.js" />
+    <Content Include="assets\js\config-inview-counter-up.js" />
+    <Content Include="assets\js\config-isotope-product-home-1.js" />
+    <Content Include="assets\js\config-isotope-product-home-2.js" />
+    <Content Include="assets\js\config-mm-menu.js" />
+    <Content Include="assets\js\config-pageload.js" />
+    <Content Include="assets\js\config-post-masonry-3-col.js" />
+    <Content Include="assets\js\config-price-slider.js" />
+    <Content Include="assets\js\config-product-masonry-shop-04.js" />
+    <Content Include="assets\js\config-set-bg-blog-thumb.js" />
+    <Content Include="assets\js\config-slider.js" />
+    <Content Include="assets\js\config-youtube-post.js" />
+    <Content Include="assets\js\demo-add-to-cart.js" />
+    <Content Include="assets\js\function-check-viewport.js" />
+    <Content Include="assets\js\global.js" />
+    <Content Include="assets\js\jquery-ui_autocomplete.min.js" />
+    <Content Include="assets\js\jquery.lazy.min.js" />
+    <Content Include="assets\js\jquery.limitkeypress.js" />
+    <Content Include="assets\js\library\animsition.min.js" />
+    <Content Include="assets\js\library\bootstrap-notify.min.js" />
+    <Content Include="assets\js\library\bootstrap-slider.js" />
+    <Content Include="assets\js\library\bootstrap.min.js" />
+    <Content Include="assets\js\library\countUp.js" />
+    <Content Include="assets\js\library\imagesloaded.pkgd.min.js" />
+    <Content Include="assets\js\library\in-view.min.js" />
+    <Content Include="assets\js\library\isotope.pkgd.min.js" />
+    <Content Include="assets\js\library\jquery.min.js" />
+    <Content Include="assets\js\library\jquery.mmenu.all.min.js" />
+    <Content Include="assets\js\library\owl.carousel.min.js" />
+    <Content Include="assets\js\library\rellax.min.js" />
+    <Content Include="assets\js\library\select2.full.min.js" />
+    <Content Include="assets\js\library\slick.min.js" />
+    <Content Include="assets\js\library\swiper.min.js" />
+    <Content Include="assets\js\library\unmin\animsition.js" />
+    <Content Include="assets\js\library\unmin\bootstrap-notify.js" />
+    <Content Include="assets\js\library\unmin\bootstrap-slider.js" />
+    <Content Include="assets\js\library\unmin\bootstrap.js" />
+    <Content Include="assets\js\library\unmin\countUp.js" />
+    <Content Include="assets\js\library\unmin\imagesloaded.pkgd.js" />
+    <Content Include="assets\js\library\unmin\isotope.pkgd.js" />
+    <Content Include="assets\js\library\unmin\jquery.js" />
+    <Content Include="assets\js\library\unmin\jquery.mmenu.all.js" />
+    <Content Include="assets\js\library\unmin\select2.full.js" />
+    <Content Include="assets\js\library\unmin\slick.js" />
+    <Content Include="assets\js\main.js" />
+    <Content Include="assets\js\util.js" />
+    <Content Include="assets\plugin\datepicker-bootstrap\bootstrap-datepicker.js" />
+    <Content Include="assets\plugin\datepicker-bootstrap\datepicker.css" />
+    <Content Include="assets\plugin\datepicker-bootstrap\locales\bootstrap-datepicker.bg.js" />
+    <Content Include="assets\plugin\datepicker-bootstrap\locales\bootstrap-datepicker.ca.js" />
+    <Content Include="assets\plugin\datepicker-bootstrap\locales\bootstrap-datepicker.cs.js" />
+    <Content Include="assets\plugin\datepicker-bootstrap\locales\bootstrap-datepicker.da.js" />
+    <Content Include="assets\plugin\datepicker-bootstrap\locales\bootstrap-datepicker.de.js" />
+    <Content Include="assets\plugin\datepicker-bootstrap\locales\bootstrap-datepicker.el.js" />
+    <Content Include="assets\plugin\datepicker-bootstrap\locales\bootstrap-datepicker.es.js" />
+    <Content Include="assets\plugin\datepicker-bootstrap\locales\bootstrap-datepicker.fi.js" />
+    <Content Include="assets\plugin\datepicker-bootstrap\locales\bootstrap-datepicker.fr.js" />
+    <Content Include="assets\plugin\datepicker-bootstrap\locales\bootstrap-datepicker.he.js" />
+    <Content Include="assets\plugin\datepicker-bootstrap\locales\bootstrap-datepicker.hr.js" />
+    <Content Include="assets\plugin\datepicker-bootstrap\locales\bootstrap-datepicker.id.js" />
+    <Content Include="assets\plugin\datepicker-bootstrap\locales\bootstrap-datepicker.is.js" />
+    <Content Include="assets\plugin\datepicker-bootstrap\locales\bootstrap-datepicker.it.js" />
+    <Content Include="assets\plugin\datepicker-bootstrap\locales\bootstrap-datepicker.ja.js" />
+    <Content Include="assets\plugin\datepicker-bootstrap\locales\bootstrap-datepicker.kr.js" />
+    <Content Include="assets\plugin\datepicker-bootstrap\locales\bootstrap-datepicker.lt.js" />
+    <Content Include="assets\plugin\datepicker-bootstrap\locales\bootstrap-datepicker.lv.js" />
+    <Content Include="assets\plugin\datepicker-bootstrap\locales\bootstrap-datepicker.ms.js" />
+    <Content Include="assets\plugin\datepicker-bootstrap\locales\bootstrap-datepicker.nb.js" />
+    <Content Include="assets\plugin\datepicker-bootstrap\locales\bootstrap-datepicker.nl.js" />
+    <Content Include="assets\plugin\datepicker-bootstrap\locales\bootstrap-datepicker.pl.js" />
+    <Content Include="assets\plugin\datepicker-bootstrap\locales\bootstrap-datepicker.pt-BR.js" />
+    <Content Include="assets\plugin\datepicker-bootstrap\locales\bootstrap-datepicker.pt.js" />
+    <Content Include="assets\plugin\datepicker-bootstrap\locales\bootstrap-datepicker.ro.js" />
+    <Content Include="assets\plugin\datepicker-bootstrap\locales\bootstrap-datepicker.rs-latin.js" />
+    <Content Include="assets\plugin\datepicker-bootstrap\locales\bootstrap-datepicker.rs.js" />
+    <Content Include="assets\plugin\datepicker-bootstrap\locales\bootstrap-datepicker.ru.js" />
+    <Content Include="assets\plugin\datepicker-bootstrap\locales\bootstrap-datepicker.sk.js" />
+    <Content Include="assets\plugin\datepicker-bootstrap\locales\bootstrap-datepicker.sl.js" />
+    <Content Include="assets\plugin\datepicker-bootstrap\locales\bootstrap-datepicker.sv.js" />
+    <Content Include="assets\plugin\datepicker-bootstrap\locales\bootstrap-datepicker.sw.js" />
+    <Content Include="assets\plugin\datepicker-bootstrap\locales\bootstrap-datepicker.th.js" />
+    <Content Include="assets\plugin\datepicker-bootstrap\locales\bootstrap-datepicker.tr.js" />
+    <Content Include="assets\plugin\datepicker-bootstrap\locales\bootstrap-datepicker.uk.js" />
+    <Content Include="assets\plugin\datepicker-bootstrap\locales\bootstrap-datepicker.zh-CN.js" />
+    <Content Include="assets\plugin\datepicker-bootstrap\locales\bootstrap-datepicker.zh-TW.js" />
+    <Content Include="assets\plugin\floatingbutton\materialize.min.css" />
+    <Content Include="assets\plugin\floatingbutton\materialize.min.js" />
+    <Content Include="assets\plugin\sweetalert2\dist\sweetalert2.all.js" />
+    <Content Include="assets\plugin\sweetalert2\dist\sweetalert2.all.min.js" />
+    <Content Include="assets\plugin\sweetalert2\dist\sweetalert2.css" />
+    <Content Include="assets\plugin\sweetalert2\dist\sweetalert2.js" />
+    <Content Include="assets\plugin\sweetalert2\dist\sweetalert2.min.css" />
+    <Content Include="assets\plugin\sweetalert2\dist\sweetalert2.min.js" />
+    <Content Include="assets\plugin\sweetalert2\src\constants.js" />
+    <Content Include="assets\plugin\sweetalert2\src\enhancers.js" />
+    <Content Include="assets\plugin\sweetalert2\src\enhancers\withGlobalDefaults.js" />
+    <Content Include="assets\plugin\sweetalert2\src\enhancers\withNoNewKeyword.js" />
+    <Content Include="assets\plugin\sweetalert2\src\extensions.js" />
+    <Content Include="assets\plugin\sweetalert2\src\extensions\withNoNewKeyword.js" />
+    <Content Include="assets\plugin\sweetalert2\src\globalState.js" />
+    <Content Include="assets\plugin\sweetalert2\src\instanceMethods.js" />
+    <Content Include="assets\plugin\sweetalert2\src\instanceMethods\enable-disable-elements.js" />
+    <Content Include="assets\plugin\sweetalert2\src\instanceMethods\getInput.js" />
+    <Content Include="assets\plugin\sweetalert2\src\instanceMethods\hideLoading.js" />
+    <Content Include="assets\plugin\sweetalert2\src\instanceMethods\progress-steps.js" />
+    <Content Include="assets\plugin\sweetalert2\src\instanceMethods\show-reset-validation-error.js" />
+    <Content Include="assets\plugin\sweetalert2\src\instanceMethods\_main.js" />
+    <Content Include="assets\plugin\sweetalert2\src\privateProps.js" />
+    <Content Include="assets\plugin\sweetalert2\src\staticMethods.js" />
+    <Content Include="assets\plugin\sweetalert2\src\staticMethods\adaptInputValidator.js" />
+    <Content Include="assets\plugin\sweetalert2\src\staticMethods\argsToParams.js" />
+    <Content Include="assets\plugin\sweetalert2\src\staticMethods\close.js" />
+    <Content Include="assets\plugin\sweetalert2\src\staticMethods\dom.js" />
+    <Content Include="assets\plugin\sweetalert2\src\staticMethods\fire.js" />
+    <Content Include="assets\plugin\sweetalert2\src\staticMethods\mixin.js" />
+    <Content Include="assets\plugin\sweetalert2\src\staticMethods\queue.js" />
+    <Content Include="assets\plugin\sweetalert2\src\staticMethods\showLoading.js" />
+    <Content Include="assets\plugin\sweetalert2\src\staticMethods\timer.js" />
+    <Content Include="assets\plugin\sweetalert2\src\SweetAlert.js" />
+    <Content Include="assets\plugin\sweetalert2\src\sweetalert2.js" />
+    <Content Include="assets\plugin\sweetalert2\src\utils\aria.js" />
+    <Content Include="assets\plugin\sweetalert2\src\utils\classes.js" />
+    <Content Include="assets\plugin\sweetalert2\src\utils\defaultInputValidators.js" />
+    <Content Include="assets\plugin\sweetalert2\src\utils\DismissReason.js" />
+    <Content Include="assets\plugin\sweetalert2\src\utils\dom\animationEndEvent.js" />
+    <Content Include="assets\plugin\sweetalert2\src\utils\dom\domUtils.js" />
+    <Content Include="assets\plugin\sweetalert2\src\utils\dom\getters.js" />
+    <Content Include="assets\plugin\sweetalert2\src\utils\dom\index.js" />
+    <Content Include="assets\plugin\sweetalert2\src\utils\dom\init.js" />
+    <Content Include="assets\plugin\sweetalert2\src\utils\dom\measureScrollbar.js" />
+    <Content Include="assets\plugin\sweetalert2\src\utils\dom\parseHtmlToContainer.js" />
+    <Content Include="assets\plugin\sweetalert2\src\utils\dom\renderers\index.js" />
+    <Content Include="assets\plugin\sweetalert2\src\utils\dom\renderers\renderActions.js" />
+    <Content Include="assets\plugin\sweetalert2\src\utils\dom\renderers\renderContent.js" />
+    <Content Include="assets\plugin\sweetalert2\src\utils\dom\renderers\renderIcon.js" />
+    <Content Include="assets\plugin\sweetalert2\src\utils\dom\renderers\renderImage.js" />
+    <Content Include="assets\plugin\sweetalert2\src\utils\dom\renderers\renderProgressSteps.js" />
+    <Content Include="assets\plugin\sweetalert2\src\utils\dom\renderers\renderTitle.js" />
+    <Content Include="assets\plugin\sweetalert2\src\utils\iosFix.js" />
+    <Content Include="assets\plugin\sweetalert2\src\utils\isNodeEnv.js" />
+    <Content Include="assets\plugin\sweetalert2\src\utils\openPopup.js" />
+    <Content Include="assets\plugin\sweetalert2\src\utils\params.js" />
+    <Content Include="assets\plugin\sweetalert2\src\utils\scrollbarFix.js" />
+    <Content Include="assets\plugin\sweetalert2\src\utils\setParameters.js" />
+    <Content Include="assets\plugin\sweetalert2\src\utils\Symbol.js" />
+    <Content Include="assets\plugin\sweetalert2\src\utils\Timer.js" />
+    <Content Include="assets\plugin\sweetalert2\src\utils\utils.js" />
+    <Content Include="assets\plugin\sweetalert2\src\utils\WeakMap.js" />
+    <Content Include="assets\revolution\assets\coloredbg.png" />
+    <Content Include="assets\revolution\assets\gridtile.png" />
+    <Content Include="assets\revolution\assets\gridtile_3x3.png" />
+    <Content Include="assets\revolution\assets\gridtile_3x3_white.png" />
+    <Content Include="assets\revolution\assets\gridtile_white.png" />
+    <Content Include="assets\revolution\assets\loader.gif" />
+    <Content Include="assets\revolution\assets\sources\fb.png" />
+    <Content Include="assets\revolution\assets\sources\fr.png" />
+    <Content Include="assets\revolution\assets\sources\ig.png" />
+    <Content Include="assets\revolution\assets\sources\post.png" />
+    <Content Include="assets\revolution\assets\sources\revolution_slide1.png" />
+    <Content Include="assets\revolution\assets\sources\revolution_slide2.png" />
+    <Content Include="assets\revolution\assets\sources\tw.png" />
+    <Content Include="assets\revolution\assets\sources\vm.png" />
+    <Content Include="assets\revolution\assets\sources\wc.png" />
+    <Content Include="assets\revolution\assets\sources\yt.png" />
+    <Content Include="assets\revolution\css\closedhand.cur" />
+    <Content Include="assets\revolution\css\index.php" />
+    <Content Include="assets\revolution\css\layers.css" />
+    <Content Include="assets\revolution\css\navigation-skins\ares.css" />
+    <Content Include="assets\revolution\css\navigation-skins\custom.css" />
+    <Content Include="assets\revolution\css\navigation-skins\dione.css" />
+    <Content Include="assets\revolution\css\navigation-skins\erinyen.css" />
+    <Content Include="assets\revolution\css\navigation-skins\gyges.css" />
+    <Content Include="assets\revolution\css\navigation-skins\hades.css" />
+    <Content Include="assets\revolution\css\navigation-skins\hebe.css" />
+    <Content Include="assets\revolution\css\navigation-skins\hephaistos.css" />
+    <Content Include="assets\revolution\css\navigation-skins\hermes.css" />
+    <Content Include="assets\revolution\css\navigation-skins\hesperiden.css" />
+    <Content Include="assets\revolution\css\navigation-skins\metis.css" />
+    <Content Include="assets\revolution\css\navigation-skins\persephone.css" />
+    <Content Include="assets\revolution\css\navigation-skins\uranus.css" />
+    <Content Include="assets\revolution\css\navigation-skins\zeus.css" />
+    <Content Include="assets\revolution\css\navigation.css" />
+    <Content Include="assets\revolution\css\openhand.cur" />
+    <Content Include="assets\revolution\css\settings.css" />
+    <Content Include="assets\revolution\fonts\font-awesome\css\font-awesome.css" />
+    <Content Include="assets\revolution\fonts\font-awesome\css\font-awesome.min.css" />
+    <Content Include="assets\revolution\fonts\font-awesome\fonts\fontawesome-webfont.svg" />
+    <Content Include="assets\revolution\fonts\font-awesome\index.php" />
+    <Content Include="assets\revolution\fonts\index.php" />
+    <Content Include="assets\revolution\fonts\pe-icon-7-stroke\css\helper.css" />
+    <Content Include="assets\revolution\fonts\pe-icon-7-stroke\css\index.php" />
+    <Content Include="assets\revolution\fonts\pe-icon-7-stroke\css\pe-icon-7-stroke.css" />
+    <Content Include="assets\revolution\fonts\pe-icon-7-stroke\fonts\index.php" />
+    <Content Include="assets\revolution\fonts\pe-icon-7-stroke\fonts\Pe-icon-7-stroke.svg" />
+    <Content Include="assets\revolution\fonts\pe-icon-7-stroke\index.php" />
+    <Content Include="assets\revolution\fonts\revicons\index.php" />
+    <Content Include="assets\revolution\fonts\revicons\revicons.svg" />
+    <Content Include="assets\revolution\index.php" />
+    <Content Include="assets\revolution\js\extensions\index.php" />
+    <Content Include="assets\revolution\js\extensions\revolution.extension.actions.min.js" />
+    <Content Include="assets\revolution\js\extensions\revolution.extension.carousel.min.js" />
+    <Content Include="assets\revolution\js\extensions\revolution.extension.kenburn.min.js" />
+    <Content Include="assets\revolution\js\extensions\revolution.extension.layeranimation.min.js" />
+    <Content Include="assets\revolution\js\extensions\revolution.extension.migration.min.js" />
+    <Content Include="assets\revolution\js\extensions\revolution.extension.navigation.min.js" />
+    <Content Include="assets\revolution\js\extensions\revolution.extension.parallax.min.js" />
+    <Content Include="assets\revolution\js\extensions\revolution.extension.slideanims.min.js" />
+    <Content Include="assets\revolution\js\extensions\revolution.extension.video.min.js" />
+    <Content Include="assets\revolution\js\extensions\source\index.php" />
+    <Content Include="assets\revolution\js\extensions\source\revolution.extension.actions.js" />
+    <Content Include="assets\revolution\js\extensions\source\revolution.extension.carousel.js" />
+    <Content Include="assets\revolution\js\extensions\source\revolution.extension.kenburn.js" />
+    <Content Include="assets\revolution\js\extensions\source\revolution.extension.layeranimation.js" />
+    <Content Include="assets\revolution\js\extensions\source\revolution.extension.migration.js" />
+    <Content Include="assets\revolution\js\extensions\source\revolution.extension.navigation.js" />
+    <Content Include="assets\revolution\js\extensions\source\revolution.extension.parallax.js" />
+    <Content Include="assets\revolution\js\extensions\source\revolution.extension.slideanims.js" />
+    <Content Include="assets\revolution\js\extensions\source\revolution.extension.video.js" />
+    <Content Include="assets\revolution\js\index.php" />
+    <Content Include="assets\revolution\js\jquery.themepunch.enablelog.js" />
+    <Content Include="assets\revolution\js\jquery.themepunch.revolution.min.js" />
+    <Content Include="assets\revolution\js\jquery.themepunch.tools.min.js" />
+    <Content Include="assets\revolution\js\source\index.php" />
+    <Content Include="assets\revolution\js\source\jquery.themepunch.enablelog.js" />
+    <Content Include="assets\revolution\js\source\jquery.themepunch.revolution.js" />
+    <Content Include="assets\revolution\js\source\jquery.themepunch.tools.min.js" />
+    <Content Include="assets\revolution\php\facebook\class-facebook.php" />
+    <Content Include="assets\revolution\php\flickr\class-flickr.php" />
+    <Content Include="assets\revolution\php\instagram\class-instagram.php" />
+    <Content Include="assets\revolution\php\twitter\class-twitter.php" />
+    <Content Include="assets\revolution\php\twitter\connection\Application.php" />
+    <Content Include="assets\revolution\php\twitter\connection\ConnectionAbstract.php" />
+    <Content Include="assets\revolution\php\twitter\connection\User.php" />
+    <Content Include="assets\revolution\php\twitter\RestApi.php" />
+    <Content Include="assets\revolution\php\vimeo\class-vimeo.php" />
+    <Content Include="assets\revolution\php\youtube\class-youtube.php" />
+    <Content Include="default.aspx" />
+    <Content Include="Form.aspx" />
+    <Content Include="img\house_icon.svg" />
+    <Content Include="img\logo-hong-leong-mobile.gif" />
+    <Content Include="img\logo_canyouhackit.jpg" />
+    <Content Include="Map.aspx" />
+    <Content Include="UploadYourInfo.aspx" />
+    <Content Include="Web.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="default.aspx.cs">
+      <DependentUpon>default.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="default.aspx.designer.cs">
+      <DependentUpon>default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Form.aspx.cs">
+      <DependentUpon>Form.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Form.aspx.designer.cs">
+      <DependentUpon>Form.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Map.aspx.cs">
+      <DependentUpon>Map.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Map.aspx.designer.cs">
+      <DependentUpon>Map.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="MasterPage_WEB.Master.cs">
+      <DependentUpon>MasterPage_WEB.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MasterPage_WEB.Master.designer.cs">
+      <DependentUpon>MasterPage_WEB.Master</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="UploadYourInfo.aspx.cs">
+      <DependentUpon>UploadYourInfo.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UploadYourInfo.aspx.designer.cs">
+      <DependentUpon>UploadYourInfo.aspx</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="MasterPage_WEB.Master" />
+    <Content Include="assets\css\main.css.map" />
+    <Content Include="assets\fonts\bootstrap\glyphicons-halflings-regular.eot" />
+    <Content Include="assets\fonts\bootstrap\glyphicons-halflings-regular.ttf" />
+    <Content Include="assets\fonts\bootstrap\glyphicons-halflings-regular.woff" />
+    <Content Include="assets\fonts\bootstrap\glyphicons-halflings-regular.woff2" />
+    <Content Include="assets\fonts\fontawesome-webfont.eot" />
+    <Content Include="assets\fonts\fontawesome-webfont.ttf" />
+    <Content Include="assets\fonts\fontawesome-webfont.woff" />
+    <Content Include="assets\fonts\fontawesome-webfont.woff2" />
+    <Content Include="assets\fonts\FontAwesome.otf" />
+    <Content Include="assets\fonts\Linearicons-Free.eot" />
+    <Content Include="assets\fonts\Linearicons-Free.ttf" />
+    <Content Include="assets\fonts\Linearicons-Free.woff" />
+    <Content Include="assets\fonts\Linearicons-Free.woff2" />
+    <Content Include="assets\plugin\sweetalert2\LICENSE" />
+    <Content Include="assets\plugin\sweetalert2\package.json" />
+    <Content Include="assets\plugin\sweetalert2\README.md" />
+    <Content Include="assets\plugin\sweetalert2\src\animations.scss" />
+    <Content Include="assets\plugin\sweetalert2\src\mixins.scss" />
+    <Content Include="assets\plugin\sweetalert2\src\sweetalert2.scss" />
+    <Content Include="assets\plugin\sweetalert2\src\toasts.scss" />
+    <Content Include="assets\plugin\sweetalert2\src\variables.scss" />
+    <Content Include="assets\revolution\fonts\font-awesome\fonts\fontawesome-webfont.eot" />
+    <Content Include="assets\revolution\fonts\font-awesome\fonts\fontawesome-webfont.ttf" />
+    <Content Include="assets\revolution\fonts\font-awesome\fonts\fontawesome-webfont.woff" />
+    <Content Include="assets\revolution\fonts\font-awesome\fonts\fontawesome-webfont.woff2" />
+    <Content Include="assets\revolution\fonts\font-awesome\fonts\FontAwesome.otf" />
+    <Content Include="assets\revolution\fonts\pe-icon-7-stroke\fonts\Pe-icon-7-stroke.eot" />
+    <Content Include="assets\revolution\fonts\pe-icon-7-stroke\fonts\Pe-icon-7-stroke.ttf" />
+    <Content Include="assets\revolution\fonts\pe-icon-7-stroke\fonts\Pe-icon-7-stroke.woff" />
+    <Content Include="assets\revolution\fonts\revicons\revicons.eot" />
+    <Content Include="assets\revolution\fonts\revicons\revicons.ttf" />
+    <Content Include="assets\revolution\fonts\revicons\revicons.woff" />
+    <Content Include="assets\revolution\info.cfg" />
+    <None Include="packages.config" />
+    <None Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+    <None Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup />
+  <ItemGroup>
+    <TypeScriptCompile Include="assets\plugin\sweetalert2\sweetalert2.d.ts" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{4A0DDDB5-7A95-4FBF-97CC-616D07737A77}" />
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\TypeScript\Microsoft.TypeScript.targets" Condition="Exists('$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\TypeScript\Microsoft.TypeScript.targets')" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>57521</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost:57521/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.0\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.0\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props'))" />
+  </Target>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
