@@ -29,6 +29,7 @@
     </style>
     <asp:ContentPlaceHolder ID="head" runat="server">
     </asp:ContentPlaceHolder>
+    <script src="assets/js/library/jquery.min.js"></script>
 </head>
 <body class="animsition">
     <div class="contact" id="page">
@@ -46,7 +47,7 @@
             </div>
         </div>
     </footer>
-    <script src="assets/js/library/jquery.min.js"></script>
+    
     <script src="assets/js/library/bootstrap.min.js"></script>
     <script src="assets/js/function-check-viewport.js"></script>
     <script src="assets/js/library/slick.min.js"></script>

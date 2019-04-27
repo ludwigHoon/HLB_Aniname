@@ -523,6 +523,7 @@
     <Content Include="assets\revolution\php\twitter\RestApi.php" />
     <Content Include="assets\revolution\php\vimeo\class-vimeo.php" />
     <Content Include="assets\revolution\php\youtube\class-youtube.php" />
+    <Content Include="Chatbot.aspx" />
     <Content Include="default.aspx" />
     <Content Include="Form.aspx" />
     <Content Include="img\house_icon.svg" />
@@ -533,6 +534,13 @@
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Chatbot.aspx.cs">
+      <DependentUpon>Chatbot.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Chatbot.aspx.designer.cs">
+      <DependentUpon>Chatbot.aspx</DependentUpon>
+    </Compile>
     <Compile Include="default.aspx.cs">
       <DependentUpon>default.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
