@@ -2,10 +2,9 @@
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
-    <section class="sub-header shop-layout-1">
-        <img class="rellax bg-overlay" src="assets/images/sub-header/09.jpg" alt="">
+    <section class="sub-header shop-layout-1" style="background-color:#002d62!important">
         <div class="overlay-call-to-action"></div>
-        <h3 class="heading-style-3">Upload Your Images</h3>
+        <h3 class="heading-style-3" style="color:#fff">Upload Your Images</h3>
     </section>
 
     <section class="boxed-sm" style="padding-top:10px;padding-bottom:44px;">
@@ -26,7 +25,7 @@
                     </div>
                 </div>
                 <div class="col-md-12 text-center">
-                    <a href="/Map.aspx" class="btn submit-btn btn-send contact_btn" style="font-size: 15px;
+                    <a href="/Success.aspx" class="btn submit-btn btn-send contact_btn" style="font-size: 15px;
     bottom: 60px;
     padding: 10px 18px;
     border: 0;
